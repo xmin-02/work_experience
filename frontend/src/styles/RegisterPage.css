@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.register-container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 40px 30px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.register-container h2 {
+  margin-bottom: 32px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container input {
+  width: 100%;
+  padding: 14px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+.register-container input:focus {
+  border-color: #0077cc;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 119, 204, 0.1);
+}
+
+.register-container input::placeholder {
+  color: #999;
+}
+
+.register-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.register-container button:hover {
+  background-color: #005fa3;
+  transform: translateY(-1px);
+}
+
+.register-container button:active {
+  transform: translateY(0);
+}
+
+.register-container .links {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.register-container .links .link-item {
+  display: flex;
+  align-items: center;
+}
+
+.register-container .links .link-separator {
+  color: #ccc;
+  font-size: 12px;
+  user-select: none;
+}
+
+.register-container .links a {
+  color: #0077cc;
+  text-decoration: none;
+  margin: 0;
+  transition: color 0.2s;
+}
+
+.register-container .links a:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+/* 로딩 상태 스타일 */
+.register-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 480px) {
+  .register-container {
+    margin: 30px 20px;
+    padding: 30px 20px;
+    max-width: none;
+  }
+  
+  .register-container h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+}

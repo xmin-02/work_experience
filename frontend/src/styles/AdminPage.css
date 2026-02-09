@@ -1,0 +1,207 @@
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(244, 244, 244, 0.9));
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+body {
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.admin-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(52, 152, 219, 0.3);
+}
+
+.admin-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-container li {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-container li:hover {
+    background: rgba(240, 248, 255, 0.9);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.admin-container button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+.admin-container button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.admin-container button.danger {
+    background-color: #e74c3c;
+}
+
+.admin-container button.danger:hover {
+    background-color: #c0392b;
+}
+
+.admin-container button.success {
+    background-color: #27ae60;
+}
+
+.admin-container button.success:hover {
+    background-color: #229954;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+/* 섹션별 스타일 */
+.pending-section,
+.password-reset-section,
+.approved-section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    border: 1px solid rgba(220, 220, 220, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.pending-section h3,
+.password-reset-section h3,
+.approved-section h3 {
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-count {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+/* 비밀번호 재설정 요청 스타일 */
+.password-reset-section li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.request-info {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin: 4px 0;
+}
+
+.request-date {
+    font-size: 12px;
+    color: #95a5a6;
+    font-style: italic;
+}
+
+.button-group {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    align-self: flex-end;
+}
+
+/* 더보기 기능 스타일 */
+.more-users-section {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(220, 220, 220, 0.4);
+}
+
+.show-more-btn,
+.show-less-btn {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(149, 165, 166, 0.3);
+}
+
+.show-more-btn:hover,
+.show-less-btn:hover {
+    background: linear-gradient(135deg, #7f8c8d, #6c7b7d);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(149, 165, 166, 0.4);
+}
+
+/* 빈 상태 메시지 스타일 */
+.pending-section p,
+.password-reset-section p,
+.approved-section p {
+    text-align: center;
+    color: #95a5a6;
+    font-style: italic;
+    padding: 2rem 1rem;
+    background: rgba(248, 249, 250, 0.6);
+    border-radius: 8px;
+    margin: 0;
+}
